@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" sizeLg="6" sizeMd="6" sizeSm="6" size-xs="10"> 
+        
+          
+        <ion-card>
+          <img class="w100" alt="Silhouette of mountains" src="/assets/images/logo.png" />
+          <ion-card-header>
+            <ion-card-title>Login</ion-card-title>
+            <ion-card-subtitle>Ingrese sus datos</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Usuario</ion-label>
+              <ion-input label="Usuario: " autocomplete="off"   type="email"  [(ngModel)]="email" name="email"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>Contraseña</ion-label>
+              <ion-input label="Contraseña: " autocomplete="off"  type="password"  [(ngModel)]="password" name="password"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-button (click)="login()">
+                  Entrar
+              </ion-button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-alert
+    [isOpen]="isAlertOpen"
+    header="Error al hacer login"
+    message="Los datos ingresados con incorrectos, verifiquelos e intente nuevamente."
+    [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)"
+  ></ion-alert>
+
+</ion-content>

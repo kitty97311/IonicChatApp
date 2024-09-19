@@ -1,0 +1,53 @@
+<ion-app>
+
+  <ion-menu contentId="main-content">
+    <ion-header  style="opacity:1">
+      <ion-toolbar>
+        <ion-title>La Caridad </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <ion-list  >
+        <ion-menu-toggle>
+        <ion-item>
+          <ion-route-link [routerLink]="['/crias']">Crias</ion-route-link>
+        </ion-item>
+
+        <ion-item>
+          <ion-route-link [routerLink]="['/pesaje']">Pesajes</ion-route-link>
+        </ion-item>
+
+        <ion-item>
+          <ion-route-link [routerLink]="['/configuracion']">Configuracion</ion-route-link>
+        </ion-item>
+
+        <ion-item>
+          <ion-route-link [routerLink]="['/users']">Users</ion-route-link>
+        </ion-item>
+
+      </ion-menu-toggle>
+
+      </ion-list>
+
+
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> 
+      
+      <ion-router-outlet *ngIf="load"></ion-router-outlet>
+    
+    </ion-content>
+  </div>
+  <!-- Solo en web -->
+  <jeep-sqlite *ngIf="isWeb"></jeep-sqlite>
+</ion-app>

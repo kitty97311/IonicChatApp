@@ -1,0 +1,3 @@
+ion-header:not(.header-collapse-main):has(~ion-content ion-header[collapse=condense]) {
+    opacity: 1 !important;
+}

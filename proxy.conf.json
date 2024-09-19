@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://abuelas.maymi.com.ve",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

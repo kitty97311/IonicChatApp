@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listado de Pesajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Listado de Pesajes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card *ngFor="let pesaje of pesajes; let i = index">
+    <ion-card-header>
+      <ion-card-title class="title">Pesaje Lote: {{pesaje['lote']}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+        <ion-col size-md="4">Material: {{pesaje['codigo_material']}}</ion-col>
+        <ion-col size-md="4">Centro: {{pesaje['codigo_centro']}}</ion-col>
+        <ion-col size-md="4">Almacen: {{pesaje['codigo_almacen']}}</ion-col>
+        <ion-col  size-xs="12" size-md="4" >Fecha Llegada:{{pesaje['fecha'] | date: 'dd/MM/yyyy'}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  
+    <ion-button fill="clear" [routerLink]="['/pesaje-detalle', pesaje['pesaje_id']]">Cargar</ion-button>
+  </ion-card>
+
+
+</ion-content>

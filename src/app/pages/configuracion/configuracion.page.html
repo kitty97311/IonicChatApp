@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Configuracion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Configuracion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-item>
+    <ion-input label="IP: "   type="text" [(ngModel)]="ip" name="ip"></ion-input>
+    <ion-button (click)="updateIp()">
+      <ion-icon name="add-outline"></ion-icon> Actualizar IP
+    </ion-button>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label>Importar informacion desde administrador</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-button 
+    (click)="importar()" 
+    expand="full">importar Informacion</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="usuarios()" expand="full">Importar Usuarios</ion-button>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="getCrias()" expand="full">Importar Crias</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="getPesajes()" expand="full">Importar Pesajes</ion-button>
+  </ion-item>
+
+  <ion-item *ngIf="load">
+    <p>Cargando</p>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Enviar Informacion al administrador</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="enviarCrias()" expand="full">Enviar Crias y Recria</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="enviarPesaje()" expand="full">Enviar Pesaje</ion-button>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Perfil de Usuario</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="logout()" expand="full">Cerrar Session</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <p>{{error}}</p>
+  </ion-item>
+
+  
+</ion-content>

@@ -1,0 +1,30 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Crias</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card *ngFor="let cria of crias; let i = index">
+    <ion-card-header>
+      <ion-card-title class="title">Cria y Recria Lote: {{cria['lote']}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+        <ion-col size-md="4">Material: {{cria['codigo_material']}}</ion-col>
+        <ion-col size-md="4">Centro: {{cria['codigo_centro']}}</ion-col>
+        <ion-col size-md="4">Almacen: {{cria['codigo_almacen']}}</ion-col>
+        <ion-col  size-xs="12" size-md="4" >Fecha Llegada:{{cria['fecha_llegada'] | date: 'dd/MM/yyyy'}}</ion-col>
+        <ion-col size-xs="12" size-md="4"  >Cantidad Incial: {{cria['cantidad_inicial']}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  
+    <ion-button fill="clear" [routerLink]="['/crias-detalle', cria['cria_id']]">Cargar</ion-button>
+  </ion-card>
+
+
+</ion-content>

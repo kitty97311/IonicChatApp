@@ -1,0 +1,267 @@
+{
+    "database": "languages.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+        {
+            "name": "languages",
+            "schema": [
+                {
+                    "column": "name",
+                    "value": "TEXT NOT NULL PRIMARY KEY"
+                }
+            ]
+        },
+        {
+            "name": "config",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "ip",
+                    "value": "TEXT NOT NULL"
+                }
+            ]
+        },
+        {
+            "name": "crias",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "cria_id",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "lote",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_material",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_centro",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_almacen",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "fecha_nacimiento",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "fecha_llegada",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "cantidad_inicial",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "m_galpon",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "m_aves",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "crias_detalle",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "cria_id",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "consumo",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "mortalidad",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "fecha",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "pesaje",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "pesaje_id",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "lote",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_material",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_centro",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_almacen",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "fecha",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "pesaje_detalle",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "pesaje_id",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "peso",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "fecha",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "usuarios",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "name",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "email",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "password",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "almacen",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "codigo_almacen",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_centro",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "nombre_almacen",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "centro",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "codigo_centro",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "codigo_empresa",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "nombre_centro",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "empresa",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "codigo_empresa",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "nombre_empresa",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        },
+        {
+            "name": "material",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "codigo_material",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "doniminacion_material",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "nombre_material",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "tipo_material",
+                    "value": "TEXT NOT NULL "
+                },
+                {
+                    "column": "lotable",
+                    "value": "TEXT NOT NULL "
+                }
+            ]
+        }
+    ]
+}

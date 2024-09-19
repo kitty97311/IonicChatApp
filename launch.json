@@ -1,0 +1,11 @@
+{
+    "name": "Attach to Android",
+    "type": "cordova",
+    "request": "attach",
+    "platform": "android",
+    "target": "device",
+    "port": 9222,
+    "sourceMaps": true,
+    "cwd": "${workspaceFolder}",
+    "ionicLiveReload": false
+  }
